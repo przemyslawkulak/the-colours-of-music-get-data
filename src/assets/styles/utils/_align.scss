@@ -1,0 +1,15 @@
+.u-align {
+  &--start {
+    text-align: left; // fallback for IE
+    text-align: start;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--end {
+    text-align: right; // fallback for IE
+    text-align: end;
+  }
+}

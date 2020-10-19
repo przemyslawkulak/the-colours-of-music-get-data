@@ -1,0 +1,27 @@
+@import '../settings/variables';
+
+.u-layer {
+  &--content {
+    z-index: $layer-content;
+  }
+
+  &--content-attached {
+    z-index: $layer-content-attached;
+  }
+
+  &--screen-attached {
+    z-index: $layer-screen-attached;
+  }
+
+  &--hint {
+    z-index: $layer-hint;
+  }
+
+  &--modal {
+    z-index: $layer-modal;
+  }
+
+  &--blocker {
+    z-index: $layer-blocker;
+  }
+}

@@ -1,0 +1,15 @@
+.u-text {
+  &--preserve-white-spaces {
+    white-space: pre-line;
+  }
+
+  &--ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &--single-line {
+    white-space: nowrap;
+  }
+}

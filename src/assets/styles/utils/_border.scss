@@ -1,0 +1,11 @@
+@import '../settings/variables';
+
+.u-border {
+  &--dark-right {
+    border-style: solid;
+  }
+
+  &--light-right {
+    border-style: solid;
+  }
+}
