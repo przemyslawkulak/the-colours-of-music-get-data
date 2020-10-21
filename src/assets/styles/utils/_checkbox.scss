@@ -1,0 +1,84 @@
+/*---------- CHECKBOX STYLING -----------*/
+
+label {
+  font-weight: 400;
+}
+
+
+/* Base for label styling */
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label.disabled,
+[type="checkbox"]:checked + label.disabled {
+  cursor: not-allowed;
+  color: #777;
+}
+
+
+/* checkbox aspect */
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  /* top: 2px; replaced by Kirill during refactoring/december */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: #DCDCDC;
+}
+
+
+/* checked mark aspect */
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  font-family: FontAwesome;
+  content: '\f00c';
+  position: absolute;
+  /* top: 2px; replaced by Kirill during refactoring/december */
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background: #084D8E;
+  transition: all .1s;
+  box-shadow: inset 0 1px 3px #084D8E;
+}
+
+[type="checkbox"]:not(:checked) + label.disabled:after,
+[type="checkbox"]:checked + label.disabled:after {
+  color: #fff;
+  background: #637e99;
+  box-shadow: inset 0 1px 3px #637e99;
+}
+
+
+/* checked mark aspect changes */
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  /* transform: scale(0); */
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  /* transform: scale(1); */
+}

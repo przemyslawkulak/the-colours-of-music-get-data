@@ -1,0 +1,55 @@
+@import '../settings/variables';
+
+.u-width {
+  &--match-parent {
+    width: 100%;
+  }
+
+  &-at-least-quarter {
+    min-width: 25%;
+  }
+
+  &--comment-popup {
+    width: 21em;
+  }
+
+  &--edit-popup {
+    width: 30em;
+  }
+
+  &--short-input {
+    width: 82px;
+  }
+
+  &--warnings-popup {
+    width: 55em;
+  }
+
+  &--modal {
+    width: 70em;
+  }
+
+  @media screen and (min-width: $screen-medium) {
+    &--m {
+      &-auto {
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-big) {
+    &--b {
+      &-auto {
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-enormous) {
+    &--e {
+      &-auto {
+        width: auto;
+      }
+    }
+  }
+}

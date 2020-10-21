@@ -1,0 +1,49 @@
+@import '../settings/variables';
+
+.u-visibility {
+  &--hidden {
+    display: none;
+  }
+
+  &--m {
+    &-visible {
+      @media screen and (max-width: $screen-medium) {
+        display: none;
+      }
+    }
+
+    &-hidden {
+      @media screen and (min-width: $screen-medium) {
+        display: none;
+      }
+    }
+  }
+
+  &--b {
+    &-visible {
+      @media screen and (max-width: $screen-big) {
+        display: none;
+      }
+    }
+
+    &-hidden {
+      @media screen and (min-width: $screen-big) {
+        display: none;
+      }
+    }
+  }
+
+  &--e {
+    &-visible {
+      @media screen and (max-width: $screen-enormous) {
+        display: none;
+      }
+    }
+
+    &-hidden {
+      @media screen and (min-width: $screen-enormous) {
+        display: none;
+      }
+    }
+  }
+}

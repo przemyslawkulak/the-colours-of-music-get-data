@@ -1,0 +1,74 @@
+
+$color-secondary-colour-light: #005f84 !default;
+$color-accent: #df5d54 !default;
+$color-error: #c5524a !default;
+$color-error-background: #ffecee !default;
+$color-warning: #cb7f00 !default;
+$color-warning-background: #fcf5ea !default;
+$color-success: #4fad00 !default;
+$color-info: #009de0 !default;
+$color-info-background: #ebf8ff !default;
+
+$color-tag-00: #a7b7c2 !default;
+$color-tag-01: #e45e5e !default;
+$color-tag-02: #eb7b43 !default;
+$color-tag-03: #e7a23b !default;
+$color-tag-04: #a2c519 !default;
+$color-tag-05: #58be19 !default;
+$color-tag-06: #249544 !default;
+$color-tag-07: #20c9a0 !default;
+$color-tag-08: #0da1aa !default;
+$color-tag-09: #0488b1 !default;
+$color-tag-10: #0087e9 !default;
+$color-tag-11: #0047ff !default;
+$color-tag-12: #7064ff !default;
+$color-tag-13: #aa69fe !default;
+$color-tag-14: #dd4fe0 !default;
+$color-tag-15: #ff4487 !default;
+
+$color-shadow: rgba(#000000, 0.4) !default;
+$color-shadow-input: rgba(#000000, 0.2) !default;
+$color-outlined-hover-background: rgba(#000000, 0.05) !default;
+
+$font-size-base: 16px;
+$font-size-xxxl: 30px;
+$font-size-xxl: 26px;
+$font-size-xl: 24px;
+$font-size-l: 18px;
+$font-size-normal: $font-size-base;
+$font-size-s: 15px;
+$font-size-xs: 14px;
+$font-size-xxs: 13px;
+$font-size-xxxs: 12px;
+$font-size-xxxxs: 10px;
+
+$font-paragraph: Roboto, sans-serif;
+$font-heading: Gotham, sans-serif;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-weight-light: 300;
+
+$input-line-height: (20 / 14) !default;
+
+//$letter-spacing-menu: 0.125rem;
+//$letter-spacing-submenu: 0;
+//$letter-spacing-heading-1: px-to-rem(0.625px, $font-size-base);
+//$letter-spacing-header: px-to-rem(2px, $font-size-base);
+
+$layout-columns: 12;
+
+$screen-small: 480px;
+$screen-medium: 784px;
+$screen-big: 1024px;
+$screen-enormous: 1600px;
+
+$layer-blocker: 5;
+$layer-modal: 4;
+$layer-hint: 3;
+$layer-screen-attached: 2;
+$layer-content-attached: 1;
+$layer-content: 0;
+
+$transition-time: 0.3s;
+$transition-ease: ease;

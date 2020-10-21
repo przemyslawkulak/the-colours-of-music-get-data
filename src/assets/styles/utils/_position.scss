@@ -1,0 +1,61 @@
+.u-position {
+  &--absolute {
+    position: absolute;
+  }
+
+  &--fixed {
+    position: fixed;
+  }
+
+  &--relative {
+    position: relative;
+  }
+
+  &--top {
+    top: 0;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  &--bottom {
+    bottom: 0;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--above {
+    bottom: 100%;
+    top: auto;
+  }
+
+  &--below {
+    bottom: auto;
+    top: 100%;
+  }
+
+  &--before {
+    left: auto;
+    right: 100%;
+  }
+
+  &--after {
+    left: 100%;
+    right: auto;
+  }
+
+  &--horizontal-center {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  &--vertical-center {
+    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
