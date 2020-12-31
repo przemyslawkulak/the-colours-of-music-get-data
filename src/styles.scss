@@ -1,2 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'assets/styles/index';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Century, Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  margin: auto;
+  height: 820px;
+  width: 100%;
+  background-color: lightcoral;
+  /* CONTAiNER WIDTHS */
+}
+@media only screen and (max-width: 35em) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+@media only screen and (min-width: 35.063em) and (max-width: 64em) {
+  .container {
+    max-width: 420px;
+  }
+}
+@media only screen and (min-width: 64.063em) and (max-width: 79.938em) {
+  .container {
+    max-width: 620px;
+  }
+}
+@media only screen and (min-width: 80.063em) {
+  .container {
+    max-width: 820px;
+  }
+}
