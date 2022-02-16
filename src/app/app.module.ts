@@ -19,14 +19,26 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // rest imports
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
+import { ArtistsListComponent } from './features/artists-list/artists-list.component';
+import { ArticleListComponent } from './features/article-list/article-list.component';
+import { NgxCsvParserModule } from 'ngx-csv-parser';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ArtistsListComponent, ArticleListComponent],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -41,6 +53,14 @@ import { AppComponent } from './app.component';
     MatRippleModule,
     MatButtonModule,
     MatDividerModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatSortModule,
+    MatInputModule,
+    DragDropModule,
+    NgxCsvParserModule
   ],
   providers: [],
   bootstrap: [AppComponent],

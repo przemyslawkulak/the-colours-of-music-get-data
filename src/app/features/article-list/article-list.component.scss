@@ -150,25 +150,17 @@
 .card-grid {
   margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-auto-rows: auto;
   grid-gap: 1rem;
 }
-
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
 
-
 .mat-drawer-container {
   background: #bdbdbd;
-  color: rgba(0,0,0,.87);
-}
-
-
-.container {
-  display: flex;
-  height: 100%;
+  color: rgba(0, 0, 0, 0.87);
 }

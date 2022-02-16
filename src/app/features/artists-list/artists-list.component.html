@@ -1,0 +1,60 @@
+<!-- <p *ngFor="let artist of artists">{{ artist.displayName }}</p> -->
+<!-- <mat-form-field appearance="standard">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input />
+</mat-form-field> -->
+
+<table mat-table [dataSource]="artists" class="mat-elevation-z8" matSort>
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+    <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="displayName">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.displayName }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Described">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Described</th>
+    <td mat-cell *matCellDef="let element">{{ element.Described }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="articles">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Articles</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.articles.length }}
+      <!-- <span *ngFor="let art of element.articles">&nbsp;{{ art.name }}&nbsp;</span> -->
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="tracks">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Songs</th>
+    <td mat-cell *matCellDef="let element">
+      <!-- {{ element.tracks.length }} -->
+      <p *ngFor="let song of element.tracks">{{ song.Title }}</p>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="top100">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Top 100</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.Top100 }}
+      <!-- <span *ngFor="let art of element.articles">&nbsp;{{ art.name }}&nbsp;</span> -->
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+  <!-- <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr> -->
+</table>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let artist of ddartists; let i = index" cdkDrag>
+    {{ i + 1 }}&nbsp;{{ artist.displayName }}
+  </div>
+</div>

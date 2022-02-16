@@ -9,6 +9,6 @@ export class ArticlesService {
   constructor(private _apiService: ApiService) {}
 
 getArticles(): Observable<any>{
-  return this._apiService.get('articles/')
+  return this._apiService.get('articles?_limit=1000')
 }
 }

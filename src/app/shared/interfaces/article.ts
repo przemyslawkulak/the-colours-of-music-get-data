@@ -8,7 +8,7 @@ export interface Article {
   id: number;
   name: string;
   published: Date;
-  status: string; // create status enum
+  status: 'draft' | 'checked' | 'published'; // create status enum
   tags: Tag[];
   title: null;
   tracks: Track[];
@@ -22,10 +22,11 @@ export interface Artist {
   created_at: Date;
   created_by: any; // todo User interface
   displayName: string;
-  id: number;
+  id?: number;
   updated_at: Date;
   updated_by: any; // todo User interface
   value: string;
+  spotifyUrl: string;
 }
 
 export interface Tag {
@@ -41,11 +42,30 @@ export interface Tag {
 
 export interface Track {
   Duration: number;
-  Title: 'In the Court of the Crimson King';
+  Title: string; //'In the Court of the Crimson King';
+  artists: Artist[];
   album: any; // todo Album interface
   created_at: Date;
   created_by: any; // todo User interface
-  id: number;
+  id?: number;
   updated_at: Date;
   updated_by: any; // todo User interface
+  spotifyUrl: string;
+  youTubeUrl: string;
+  discNumber: number;
+  trackNumber: number;
+  trackPreviewURL: string;
+}
+
+export interface Album {
+  Title: string;
+  tags: Tag[];
+  tracks: Track[];
+  top200: number;
+  described: boolean;
+  artist: Artist[];
+  releaseDate: string;
+  spotifyUrl: string;
+  imageUrl: string;
+  id?: number;
 }
